@@ -7,7 +7,7 @@ def main():
         response = requests.get("http://localhost:9080/temp/get/")
         values = response.json()
         print(values)
-        val = input("Refresh? Y/N ")
+        val = input("Refresh? Y/N: ")
         if val.lower() == 'n':
             menu_loop = False
         else:
