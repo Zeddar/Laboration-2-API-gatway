@@ -1,0 +1,90 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e2ebdf114f45c2eb",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "/kyh/temperature_kyh",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "f957cb6bbfc4e8d3",
+        "x": 580,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "bd27065088679f9d",
+        "type": "random",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "low": "10",
+        "high": "26",
+        "inte": "true",
+        "property": "payload",
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "e2ebdf114f45c2eb"
+            ]
+        ]
+    },
+    {
+        "id": "f3cdea5893ab98cb",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 360,
+        "wires": [
+            [
+                "bd27065088679f9d"
+            ]
+        ]
+    },
+    {
+        "id": "f957cb6bbfc4e8d3",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.mqttdashboard.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
