@@ -1,0 +1,30 @@
+{
+  "uri": "/temp/get/",
+  "name": "assignment_2",
+  "methods": [
+    "GET"
+  ],
+  "upstream": {
+    "nodes": [
+      {
+        "host": "host.docker.internal",
+        "port": 5000,
+        "weight": 1
+      }
+    ],
+    "timeout": {
+      "connect": 6,
+      "send": 6,
+      "read": 6
+    },
+    "type": "roundrobin",
+    "scheme": "http",
+    "pass_host": "pass",
+    "keepalive_pool": {
+      "idle_timeout": 60,
+      "requests": 1000,
+      "size": 320
+    }
+  },
+  "status": 1
+}
